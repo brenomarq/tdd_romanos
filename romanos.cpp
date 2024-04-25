@@ -31,5 +31,9 @@ int romanos_para_decimal(const std::string num_romano)
     valorPrevio = valor;
   }
 
+  if (resultado == 0) {
+    return -1;
+  }
+
   return resultado;
 }
