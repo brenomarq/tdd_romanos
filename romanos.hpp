@@ -1,2 +1,3 @@
-int romanos_para_decimal(char const * num_romano);
- 
+#include <string>
+
+int romanos_para_decimal(const std::string num_romano);

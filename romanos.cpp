@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int romanos_para_decimal(const string num_romano)
+int romanos_para_decimal(const std::string num_romano)
 {
   unordered_map<char, int> algarismos = {
     {'I', 1},
@@ -16,12 +16,7 @@ int romanos_para_decimal(const string num_romano)
     {'M', 1000},
   };
 
-  int resultado = 0;
-  int valorPrevio = 0;
+  int valor = algarismos[num_romano[0]];
 
-  for(int i = 0; i < num_romano.size(); ++i) {
-
-  }
-
-  return 0;
+  return valor;
 }
