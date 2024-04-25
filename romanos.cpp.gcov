@@ -20,20 +20,20 @@
         8:   19:  int resultado = 0;
         8:   20:  int valorPrevio = 0;
         -:   21:
-       21:   22:  for (int i = num_romano.size() - 1; i >= 0; --i) {
+       19:   22:  for (int i = num_romano.size() - 1; i >= 0; --i) {
        13:   23:    int valor = algarismos[num_romano[i]];
         -:   24:
-       13:   25:    if (valor < valorPrevio) {
-        3:   26:      resultado -= valor;
-        -:   27:    } else {
-       10:   28:      resultado += valor;
-        -:   29:    }
-        -:   30:
-       13:   31:    valorPrevio = valor;
-        -:   32:  }
-        -:   33:
-        8:   34:  if (resultado == 0) {
-        2:   35:    return -1;
+       13:   25:    if (valor == 0) {
+        2:   26:      return -1;
+        -:   27:    }
+        -:   28:
+       11:   29:    if (valor < valorPrevio) {
+        3:   30:      resultado -= valor;
+        -:   31:    } else {
+        8:   32:      resultado += valor;
+        -:   33:    }
+        -:   34:
+       11:   35:    valorPrevio = valor;
         -:   36:  }
         -:   37:
         6:   38:  return resultado;

@@ -22,6 +22,10 @@ int romanos_para_decimal(const std::string num_romano) {
   for (int i = num_romano.size() - 1; i >= 0; --i) {
     int valor = algarismos[num_romano[i]];
 
+    if (valor == 0) {
+      return -1;
+    }
+
     if (valor < valorPrevio) {
       resultado -= valor;
     } else {
@@ -29,10 +33,6 @@ int romanos_para_decimal(const std::string num_romano) {
     }
 
     valorPrevio = valor;
-  }
-
-  if (resultado == 0) {
-    return -1;
   }
 
   return resultado;
