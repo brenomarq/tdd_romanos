@@ -16,7 +16,20 @@ int romanos_para_decimal(const std::string num_romano)
     {'M', 1000},
   };
 
-  int valor = algarismos[num_romano[0]];
+  int resultado = 0;
+  int valorPrevio = 0;
 
-  return valor;
+  for(int i = num_romano.size() - 1; i >= 0; --i) {
+    int valor = algarismos[num_romano[i]];
+
+    if (valor < valorPrevio) {
+      resultado -= valor;
+    } else {
+      resultado += valor;
+    }
+
+    valorPrevio = valor;
+  }
+
+  return resultado;
 }
